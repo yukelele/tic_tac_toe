@@ -61,7 +61,7 @@ void turn(int choice, char mark, int &player) {
   else {
     cout << "Invalid move\n" << 
       "Please only select a number that is shown on the board" << endl;     
-
+ 
     player--;
     cin.ignore();
     cin.get();

@@ -9,7 +9,7 @@ void turn(int choice, char mark, int &player);
  
 int main() {
   int player = 1, i, choice;
-
+ 
   char mark;
 
   do {
@@ -23,6 +23,8 @@ int main() {
     mark = (player == 1) ? 'X' : 'O';
 
     turn(choice,mark,player);
+
+    cout << "stoppppp" << endl;
 
     i = checkwin();
     player++;
@@ -61,10 +63,20 @@ void turn(int choice, char mark, int &player) {
   else {
     cout << "Invalid move\n" << 
       "Please only select a number that is shown on the board" << endl;     
- 
+    
     player--;
-    cin.ignore();
     cin.get();
+    
+
+/*
+    cin.ignore();
+    cin >> choice;
+    player--;
+    turn(choice, mark, player);
+    player--;
+    //cin.ignore();
+    //cin.get();
+    */
   }
 }
 
