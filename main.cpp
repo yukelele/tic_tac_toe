@@ -24,7 +24,7 @@ int main() {
 
     turn(choice,mark,player);
 
-    cout << "stoppppp" << endl;
+    
 
     i = checkwin();
     player++;
