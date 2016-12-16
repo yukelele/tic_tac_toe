@@ -7,6 +7,9 @@ int checkwin();
 void board();
 void turn(int choice, char mark, int &player);
  
+/**
+  Runs the game.
+*/
 int main() {
   int player = 1, i, choice;
  
@@ -24,8 +27,6 @@ int main() {
 
     turn(choice,mark,player);
 
-    
-
     i = checkwin();
     player++;
   }while(i==-1);
@@ -41,6 +42,9 @@ int main() {
   return 0; 
 }
 
+/**
+  Change the number to the current player turn's mark.'
+*/
 void turn(int choice, char mark, int &player) {
   if (choice == 1 && square[1] == '1')
     square[1] = mark;
@@ -80,6 +84,9 @@ void turn(int choice, char mark, int &player) {
   }
 }
 
+/**
+ Indicates whether a player wins or runs into a tie game.
+*/
 int checkwin() {
   if (square[1] == square[2] && square[2] == square[3])
     return 1;
@@ -106,6 +113,9 @@ int checkwin() {
     return -1;
 }
 
+/**
+  Display a command-line board for the game.
+*/
 void board() {
   system("cls");
   cout << "\n\n\tTic Tac Toe\n\n";
